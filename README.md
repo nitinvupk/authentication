@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby version
+  2.6.1
 
-Things you may want to cover:
+## Bundle Install
 
-* Ruby version
+    bundle install
 
-* System dependencies
+## Setup Dependencies
 
-* Configuration
+    bundle exec figaro install
 
-* Database creation
+## SetUp Environment Variable
 
-* Database initialization
+    RAILS_MAX_THREADS: 5
+	DATABASE_HOST: localhost
+	DATABASE_USERNAME: postgres
+	DATABASE_PASSWORD: postgres
+	HOST: 'localhost:3000'
 
-* How to run the test suite
+## SetUp Database
 
-* Services (job queues, cache servers, search engines, etc.)
+	rake db:create db:migrate	
 
-* Deployment instructions
 
-* ...
+## How to run the test suite
+	
+	rspec spec
+
+## Start Server
+
+	rails s
+
+## Check the server
+	http://localhost:3000/
