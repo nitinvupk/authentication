@@ -1,0 +1,14 @@
+<h2>Forgot your password?</h2>
+
+<%= form_tag(passwords_path) do |f| %>
+
+  <div class="field">
+    <%= label_tag :email %><br />
+    <%= email_field_tag :email%>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Send me reset password instructions" %>
+  </div>
+<% end %>
+<%= render "layouts/authenticate/shared_links"%>

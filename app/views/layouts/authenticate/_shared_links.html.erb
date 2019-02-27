@@ -1,0 +1,11 @@
+<%- if controller_name != 'sessions' %>
+  <%= link_to "Log in", new_session_path() %><br />
+<% end %>
+
+<%- if controller_name != 'users' %>
+  <%= link_to "Sign up", signup_path() %><br />
+<% end %>
+
+<%- if controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot your password?", new_password_path() %><br />
+<% end %>

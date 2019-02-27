@@ -1,0 +1,20 @@
+<h2>Change your password</h2>
+
+<%= form_tag(password_path(params[:id]), method: :put) do |f| %>
+  <%= hidden_field_tag :email, params[:email]%>
+  <div class="field">
+    <%= label_tag :password, "New password" %><br />
+    <%= password_field_tag :password%>
+  </div>
+
+  <div class="field">
+    <%= label_tag :password_confirmation, "Confirm new password" %><br />
+    <%= password_field_tag :password_confirmation%>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Change my password" %>
+  </div>
+<% end %>
+
+<%= render "layouts/authenticate/shared_links"%>
